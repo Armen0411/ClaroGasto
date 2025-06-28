@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarogasto - Tu asistente inteligente para controlar tus gastos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1E88E5',secondary:'#26A69A'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20professional%20workspace%20with%20a%20smartphone%20displaying%20a%20finance%20app%2C%20soft%20blue%20gradient%20background%20with%20abstract%20financial%20elements%2C%20clean%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=1600&height=800&seq=hero-bg-1&orientation=landscape');
+background-size: cover;
+background-position: right center;
+}
+.gradient-bg {
+background: linear-gradient(135deg, #1E88E5 0%, #26A69A 100%);
+}
+input:focus {
+outline: none;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navegación -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center mr-2">
+<i class="ri-receipt-line text-white ri-lg"></i>
+</div>
+<span class="text-2xl font-bold text-primary">Clarogasto</span>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#caracteristicas" class="text-gray-700 hover:text-primary transition-colors">Características</a>
+<a href="#beneficios" class="text-gray-700 hover:text-primary transition-colors">Beneficios</a>
+<a href="#como-funciona" class="text-gray-700 hover:text-primary transition-colors">Cómo funciona</a>
+<a href="#preguntas" class="text-gray-700 hover:text-primary transition-colors">FAQ</a>
+</nav>
+<div class="flex items-center">
+<a href="#descargar" class="hidden md:block bg-secondary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Probar ahora</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg pt-24 md:pt-32 pb-16 md:pb-24">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-xl bg-white bg-opacity-95 p-8 md:p-12 rounded-xl shadow-lg">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Clarogasto</h1>
+<h2 class="text-xl md:text-2xl text-gray-600 mb-6">Tu asistente inteligente para controlar tus gastos</h2>
+<p class="text-gray-700 mb-8">Simplifica el seguimiento de tus finanzas con nuestra aplicación que automatiza el registro de facturas y te ofrece análisis detallados de tus gastos.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#descargar" class="bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all text-center font-medium">Probar ahora</a>
+<a href="#como-funciona" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-all text-center font-medium">Cómo funciona</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Beneficios -->
+<section id="beneficios" class="py-16 md:py-24 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Beneficios principales</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Descubre cómo Clarogasto transforma la manera en que gestionas tus finanzas personales.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Beneficio 1 -->
+<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-upload-cloud-line text-secondary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Sube tus facturas</h3>
+<p class="text-gray-600 text-center">Captura fotos de tus facturas o sube PDFs directamente desde tu móvil con un simple toque.</p>
+</div>
+<!-- Beneficio 2 -->
+<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-robot-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Análisis automático</h3>
+<p class="text-gray-600 text-center">Nuestra tecnología OCR detecta automáticamente importes, fechas y categorías de tus gastos.</p>
+</div>
+<!-- Beneficio 3 -->
+<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-shield-check-line text-secondary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Datos seguros</h3>
+<p class="text-gray-600 text-center">Toda tu información se almacena de forma segura en la nube con encriptación avanzada.</p>
+</div>
+<!-- Beneficio 4 -->
+<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-pie-chart-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Visualiza tus gastos</h3>
+<p class="text-gray-600 text-center">Consulta informes detallados y gráficos que te ayudan a entender tus hábitos de consumo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Características -->
+<section id="caracteristicas" class="py-16 md:py-24">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Características avanzadas</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Clarogasto combina tecnología de vanguardia con una interfaz intuitiva para ofrecerte la mejor experiencia.</p>
+</div>
+<!-- Característica 1 -->
+<div class="flex flex-col md:flex-row items-center mb-20">
+<div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Reconocimiento inteligente OCR</h3>
+<p class="text-gray-600 mb-6">Nuestra tecnología de reconocimiento óptico de caracteres analiza automáticamente tus facturas para extraer toda la información relevante sin que tengas que introducirla manualmente.</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Detección precisa de importes y fechas</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Categorización automática de gastos</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Procesamiento rápido en segundos</span>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=A%20smartphone%20scanning%20a%20receipt%20with%20OCR%20technology%2C%20digital%20data%20extraction%20visualization%2C%20blue%20and%20green%20interface%20elements%2C%20modern%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=600&height=400&seq=feature-1&orientation=landscape" alt="Reconocimiento OCR" class="rounded-xl shadow-lg w-full object-cover object-top">
+</div>
+</div>
+<!-- Característica 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center mb-20">
+<div class="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Almacenamiento seguro en la nube</h3>
+<p class="text-gray-600 mb-6">Todos tus datos se sincronizan automáticamente con Firebase, permitiéndote acceder a tu información desde cualquier dispositivo y garantizando que nunca perderás tus registros.</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Sincronización automática entre dispositivos</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Copias de seguridad continuas</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Protección con encriptación avanzada</span>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Cloud%20storage%20security%20concept%2C%20data%20synchronization%20between%20devices%2C%20secure%20database%20visualization%20with%20lock%20symbols%2C%20blue%20and%20green%20interface%20elements%2C%20modern%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=600&height=400&seq=feature-2&orientation=landscape" alt="Almacenamiento en la nube" class="rounded-xl shadow-lg w-full object-cover object-top">
+</div>
+</div>
+<!-- Característica 3 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+<h3 class="text-2xl font-semibold text-gray-800 mb-4">Análisis visual de gastos</h3>
+<p class="text-gray-600 mb-6">Visualiza tus patrones de gasto con gráficos intuitivos que te ayudan a identificar oportunidades de ahorro y a planificar mejor tu presupuesto.</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Gráficos circulares por categorías</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Análisis de tendencias mensuales</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center text-secondary mr-2 mt-0.5">
+<i class="ri-check-line ri-lg"></i>
+</div>
+<span class="text-gray-700">Exportación de informes detallados</span>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2">
+<div id="chart-container" class="bg-white rounded-xl shadow-lg p-4 h-80"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cómo funciona -->
+<section id="como-funciona" class="py-16 md:py-24 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Cómo funciona</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Controlar tus gastos nunca ha sido tan sencillo. Sigue estos simples pasos:</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Paso 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<span class="text-2xl font-bold text-primary">1</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Captura tu factura</h3>
+<p class="text-gray-600">Toma una foto de tu factura o sube un PDF directamente desde la aplicación móvil.</p>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=A%20hand%20holding%20a%20smartphone%20taking%20a%20photo%20of%20a%20receipt%2C%20simple%20clean%20background%2C%20modern%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=300&height=200&seq=step-1&orientation=landscape" alt="Captura factura" class="rounded-lg shadow mx-auto w-full object-cover object-top">
+</div>
+</div>
+<!-- Paso 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<span class="text-2xl font-bold text-primary">2</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Procesamiento automático</h3>
+<p class="text-gray-600">Nuestro sistema OCR extrae y categoriza automáticamente todos los datos relevantes.</p>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=OCR%20processing%20visualization%2C%20data%20extraction%20from%20receipt%2C%20digital%20scanning%20technology%2C%20blue%20and%20green%20interface%20elements%2C%20modern%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=300&height=200&seq=step-2&orientation=landscape" alt="Procesamiento OCR" class="rounded-lg shadow mx-auto w-full object-cover object-top">
+</div>
+</div>
+<!-- Paso 3 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<span class="text-2xl font-bold text-primary">3</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Visualiza tus finanzas</h3>
+<p class="text-gray-600">Consulta informes detallados y gráficos que te muestran exactamente dónde va tu dinero.</p>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=Financial%20dashboard%20on%20smartphone%20with%20pie%20charts%20and%20expense%20tracking%2C%20data%20visualization%20interface%2C%20blue%20and%20green%20color%20scheme%2C%20modern%20minimalist%20design%2C%20high-quality%20digital%20illustration&width=300&height=200&seq=step-3&orientation=landscape" alt="Visualización de datos" class="rounded-lg shadow mx-auto w-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios -->
+<section class="py-16 md:py-24">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lo que dicen nuestros usuarios</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Miles de personas ya han simplificado la gestión de sus finanzas con Clarogasto.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonio 1 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"Desde que uso Clarogasto, he conseguido ahorrar más de 200€ mensuales al identificar gastos innecesarios que antes ni siquiera notaba. La aplicación es increíblemente fácil de usar."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line text-gray-500 ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Carlos Martínez</h4>
+<p class="text-gray-500 text-sm">Ingeniero de Software</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"Lo que más me gusta es la precisión del OCR. Reconoce perfectamente todas mis facturas y tickets, incluso los que tienen mala calidad. Ha simplificado enormemente mi contabilidad personal."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line text-gray-500 ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Elena Rodríguez</h4>
+<p class="text-gray-500 text-sm">Autónoma</p>
+</div>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-half-line ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"Clarogasto me ha ayudado a organizar las finanzas de mi pequeño negocio. Los gráficos son muy intuitivos y me permiten ver rápidamente dónde estamos gastando demasiado."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-line text-gray-500 ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Miguel Fernández</h4>
+<p class="text-gray-500 text-sm">Propietario de restaurante</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Preguntas frecuentes -->
+<section id="preguntas" class="py-16 md:py-24 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Preguntas frecuentes</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Resolvemos tus dudas sobre Clarogasto.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<!-- Pregunta 1 -->
+<div class="mb-6">
+<button class="w-full flex justify-between items-center bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow text-left" id="faq-1-btn">
+<h3 class="text-lg font-semibold text-gray-800">¿Cómo funciona el reconocimiento OCR?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line ri-lg faq-icon"></i>
+</div>
+</button>
+<div class="bg-white px-5 pb-5 rounded-b-xl shadow-sm hidden" id="faq-1-content">
+<p class="text-gray-600">Nuestra tecnología OCR (Reconocimiento Óptico de Caracteres) analiza las imágenes de tus facturas o tickets para identificar automáticamente información como el importe total, la fecha, el establecimiento y el tipo de gasto. El sistema aprende continuamente para mejorar la precisión con cada uso.</p>
+</div>
+</div>
+<!-- Pregunta 2 -->
+<div class="mb-6">
+<button class="w-full flex justify-between items-center bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow text-left" id="faq-2-btn">
+<h3 class="text-lg font-semibold text-gray-800">¿Es seguro almacenar mis datos financieros en la app?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line ri-lg faq-icon"></i>
+</div>
+</button>
+<div class="bg-white px-5 pb-5 rounded-b-xl shadow-sm hidden" id="faq-2-content">
+<p class="text-gray-600">Absolutamente. Utilizamos Firebase, la plataforma de Google, para almacenar tus datos con encriptación de nivel bancario. Además, nunca compartimos tu información con terceros y puedes solicitar la eliminación completa de tus datos en cualquier momento.</p>
+</div>
+</div>
+<!-- Pregunta 3 -->
+<div class="mb-6">
+<button class="w-full flex justify-between items-center bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow text-left" id="faq-3-btn">
+<h3 class="text-lg font-semibold text-gray-800">¿Puedo exportar mis datos a otros formatos?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line ri-lg faq-icon"></i>
+</div>
+</button>
+<div class="bg-white px-5 pb-5 rounded-b-xl shadow-sm hidden" id="faq-3-content">
+<p class="text-gray-600">Sí, Clarogasto te permite exportar tus datos en formatos CSV y PDF. Esto facilita la integración con otras herramientas financieras o la presentación de informes para declaraciones de impuestos y otros trámites.</p>
+</div>
+</div>
+<!-- Pregunta 4 -->
+<div class="mb-6">
+<button class="w-full flex justify-between items-center bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow text-left" id="faq-4-btn">
+<h3 class="text-lg font-semibold text-gray-800">¿Funciona sin conexión a internet?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line ri-lg faq-icon"></i>
+</div>
+</button>
+<div class="bg-white px-5 pb-5 rounded-b-xl shadow-sm hidden" id="faq-4-content">
+<p class="text-gray-600">Clarogasto puede capturar imágenes sin conexión, pero el procesamiento OCR y la sincronización con la nube requieren conexión a internet. Los datos se almacenarán localmente hasta que puedas conectarte de nuevo.</p>
+</div>
+</div>
+<!-- Pregunta 5 -->
+<div>
+<button class="w-full flex justify-between items-center bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow text-left" id="faq-5-btn">
+<h3 class="text-lg font-semibold text-gray-800">¿Hay una versión para escritorio?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line ri-lg faq-icon"></i>
+</div>
+</button>
+<div class="bg-white px-5 pb-5 rounded-b-xl shadow-sm hidden" id="faq-5-content">
+<p class="text-gray-600">Actualmente Clarogasto está disponible como aplicación móvil para iOS y Android. Sin embargo, puedes acceder a tu panel de control desde cualquier navegador web en tu ordenador, donde podrás visualizar y analizar tus datos, aunque la captura de facturas está optimizada para dispositivos móviles.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section id="descargar" class="gradient-bg py-16 md:py-24 text-white">
+<div class="container mx-auto px-4 text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Comienza a controlar tus gastos hoy</h2>
+<p class="text-xl opacity-90 max-w-2xl mx-auto mb-10">Únete a miles de usuarios que ya han simplificado la gestión de sus finanzas personales con Clarogasto.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+<a href="#" class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all flex items-center justify-center font-medium">
+<i class="ri-apple-fill ri-lg mr-2"></i>
+Descargar para iOS
+</a>
+<a href="#" class="bg-white text-primary px-8 py-4 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all flex items-center justify-center font-medium">
+<i class="ri-android-fill ri-lg mr-2"></i>
+Descargar para Android
+</a>
+</div>
+<div class="max-w-md mx-auto">
+<p class="text-white opacity-80 mb-4">¿Quieres recibir novedades y consejos sobre finanzas personales?</p>
+<form class="flex flex-col sm:flex-row gap-3">
+<input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 !rounded-button border-none text-gray-800 focus:ring-2 focus:ring-secondary">
+<button type="submit" class="bg-secondary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Suscribirme</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Logo y descripción -->
+<div class="md:col-span-1">
+<div class="flex items-center mb-4">
+<div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center mr-2">
+<i class="ri-receipt-line text-white ri-sm"></i>
+</div>
+<span class="text-xl font-bold">Clarogasto</span>
+</div>
+<p class="text-gray-400 mb-4">Tu asistente inteligente para controlar tus gastos y mejorar tus finanzas personales.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<!-- Enlaces rápidos -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+<ul class="space-y-2">
+<li><a href="#caracteristicas" class="text-gray-400 hover:text-white transition-colors">Características</a></li>
+<li><a href="#beneficios" class="text-gray-400 hover:text-white transition-colors">Beneficios</a></li>
+<li><a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Cómo funciona</a></li>
+<li><a href="#preguntas" class="text-gray-400 hover:text-white transition-colors">Preguntas frecuentes</a></li>
+<li><a href="#descargar" class="text-gray-400 hover:text-white transition-colors">Descargar</a></li>
+</ul>
+</div>
+<!-- Legal -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Legal</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Términos y condiciones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de privacidad</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de cookies</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Aviso legal</a></li>
+</ul>
+</div>
+<!-- Contacto -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Contacto</h3>
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2 mt-0.5">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">clarogasto@gmail.com</span>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Clarogasto. Todos los derechos reservados.</p>
+<div class="flex space-x-6">
+<i class="ri-visa-fill ri-lg text-gray-400"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+<i class="ri-paypal-fill ri-lg text-gray-400"></i>
+<i class="ri-apple-fill ri-lg text-gray-400"></i>
+<i class="ri-google-fill ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script id="chart-script">
+document.addEventListener('DOMContentLoaded', function() {
+const chartContainer = document.getElementById('chart-container');
+if (chartContainer) {
+const myChart = echarts.init(chartContainer);
+const option = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+borderColor: '#f1f1f1',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+top: '5%',
+left: 'center',
+textStyle: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Gastos por categoría',
+type: 'pie',
+radius: ['40%', '70%'],
+avoidLabelOverlap: false,
+itemStyle: {
+borderRadius: 8,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: false,
+position: 'center'
+},
+emphasis: {
+label: {
+show: true,
+fontSize: '18',
+fontWeight: 'bold',
+color: '#1f2937'
+}
+},
+labelLine: {
+show: false
+},
+data: [
+{ value: 1048, name: 'Alimentación', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+{ value: 735, name: 'Transporte', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+{ value: 580, name: 'Ocio', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+{ value: 484, name: 'Hogar', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+]
+}
+]
+};
+myChart.setOption(option);
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+}
+});
+</script>
+<script id="faq-script">
+document.addEventListener('DOMContentLoaded', function() {
+const faqButtons = document.querySelectorAll('[id$="-btn"]');
+faqButtons.forEach(button => {
+button.addEventListener('click', function() {
+const contentId = this.id.replace('-btn', '-content');
+const content = document.getElementById(contentId);
+const icon = this.querySelector('.faq-icon');
+if (content.classList.contains('hidden')) {
+content.classList.remove('hidden');
+icon.classList.remove('ri-arrow-down-s-line');
+icon.classList.add('ri-arrow-up-s-line');
+} else {
+content.classList.add('hidden');
+icon.classList.remove('ri-arrow-up-s-line');
+icon.classList.add('ri-arrow-down-s-line');
+}
+});
+});
+});
+</script>
+</body>
+</html>
