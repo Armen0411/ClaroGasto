@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cómo comprar criptomonedas por primera vez (guía para principiantes)"
-date: 2026-05-17
+date: 2026-05-17 10:00:00
 category: "Guía básica"
 reading_time: 8
 excerpt: "Si nunca has comprado cripto y no sabes por dónde empezar, esta guía es para ti. Te explico paso a paso cómo hacerlo de forma segura, sin tecnicismos y con ejemplos reales."
