@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Los 5 errores más comunes al empezar con criptomonedas"
-date: 2026-05-18
+date: 2026-05-17 10:00:00
 category: "Consejos"
 reading_time: 6
 excerpt: "Casi todo el mundo comete los mismos errores cuando empieza con cripto. Te los explico para que no pierdas dinero innecesariamente."
