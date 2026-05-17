@@ -1,0 +1,21 @@
+title: "ClaroGasto"
+description: "Aprende a invertir en criptomonedas desde cero. Guías claras y honestas para principiantes."
+url: "https://clarogasto.com"
+baseurl: ""
+author: "ClaroGasto"
+lang: "es"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Google AdSense (activa cuando tengas aprobación) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  {% seo %}
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <span class="logo-icon">₿</span>
+        <span class="logo-text">claro<strong>gasto</strong></span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Inicio</a>
+        <a href="{{ '/guias/' | relative_url }}">Guías</a>
+        <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="{{ '/' | relative_url }}" class="site-logo">
+            <span class="logo-icon">₿</span>
+            <span class="logo-text">claro<strong>gasto</strong></span>
+          </a>
+          <p>Aprende a invertir en cripto desde cero, sin jerga técnica y con honestidad.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Contenido</h4>
+          <a href="{{ '/' | relative_url }}">Inicio</a>
+          <a href="{{ '/guias/' | relative_url }}">Guías</a>
+          <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="{{ '/aviso-legal/' | relative_url }}">Aviso legal</a>
+          <a href="{{ '/privacidad/' | relative_url }}">Privacidad</a>
+          <a href="{{ '/cookies/' | relative_url }}">Cookies</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{ site.time | date: '%Y' }} ClaroGasto · Este blog no ofrece asesoramiento financiero.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

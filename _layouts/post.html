@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="post-page">
+  <div class="container">
+
+    <div class="post-header">
+      {% if page.category %}
+      <span class="post-category">{{ page.category }}</span>
+      {% endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d de %B de %Y" }}</time>
+        {% if page.reading_time %}
+        · {{ page.reading_time }} min de lectura
+        {% endif %}
+      </div>
+      {% if page.excerpt %}
+      <p class="post-intro">{{ page.excerpt }}</p>
+      {% endif %}
+    </div>
+
+    <!-- AdSense: banner bajo el título (activar cuando tengas aprobación) -->
+    <!--
+    <div class="ad-banner">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    -->
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <!-- AdSense: banner al final del artículo -->
+    <!--
+    <div class="ad-banner">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    -->
+
+    <div class="post-footer">
+      <a href="{{ '/' | relative_url }}" class="back-link">← Volver al inicio</a>
+    </div>
+
+  </div>
+</article>
