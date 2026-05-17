@@ -3,11 +3,10 @@ layout: default
 title: "Aprende a invertir en cripto desde cero"
 ---
 
-<!-- Hero -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
-      <span class="hero-tag">🟢 Blog de criptomonedas</span>
+      <span class="hero-tag">₿ Blog de criptomonedas</span>
       <h1>Entiende las cripto<br>sin <em>complicaciones</em></h1>
       <p>Guías honestas y sencillas para que cualquier persona pueda empezar a invertir en criptomonedas, aunque parta desde cero.</p>
       <a href="#articulos" class="hero-cta">Leer las guías →</a>
@@ -15,30 +14,80 @@ title: "Aprende a invertir en cripto desde cero"
   </div>
 </section>
 
-<!-- Artículos -->
 <section class="posts-section" id="articulos">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Últimos artículos</h2>
+      <span class="section-title">Últimos artículos</span>
+      <div class="section-divider"></div>
     </div>
 
-    <div class="posts-grid">
-      {% for post in site.posts %}
-      <a href="{{ post.url | relative_url }}" class="post-card">
-        <div class="post-card-category">{{ post.category | default: "Guía" }}</div>
-        <h3 class="post-card-title">{{ post.title }}</h3>
-        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-        <div class="post-card-meta">
-          <time>{{ post.date | date: "%-d %b %Y" }}</time>
-          <span class="post-card-read">Leer →</span>
-        </div>
-      </a>
-      {% endfor %}
+    {% assign posts = site.posts %}
+    {% assign total = posts.size %}
+    {% assign unsplash_main = "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=900&q=80" %}
+    {% assign unsplash_second = "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=600&q=80" %}
 
-      {% if site.posts.size == 0 %}
-      <p style="color: #6B6B65;">Próximamente los primeros artículos...</p>
+    {% if total == 0 %}
+      <p style="color:#9A9A9E;">Próximamente los primeros artículos...</p>
+    {% else %}
+
+      <div class="posts-grid-hero">
+        {% assign post = posts[0] %}
+        <a href="{{ post.url | relative_url }}" class="post-card-featured">
+          <img class="card-image" src="{{ post.image | default: unsplash_main }}" alt="{{ post.title }}">
+          <div class="card-overlay"></div>
+          <div class="card-body">
+            <span class="card-category">{{ post.category | default: 'Guía' }}</span>
+            <h2 class="card-title-lg">{{ post.title }}</h2>
+            <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+            <div class="card-meta">
+              <time>{{ post.date | date: "%-d %b %Y" }}</time>
+              <span class="card-read">Leer →</span>
+            </div>
+          </div>
+        </a>
+
+        {% if total > 1 %}
+        {% assign post = posts[1] %}
+        <a href="{{ post.url | relative_url }}" class="post-card-medium">
+          <img class="card-image" src="{{ post.image | default: unsplash_second }}" alt="{{ post.title }}">
+          <div class="card-overlay"></div>
+          <div class="card-body">
+            <span class="card-category">{{ post.category | default: 'Guía' }}</span>
+            <h3 class="card-title-md">{{ post.title }}</h3>
+            <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 90 }}</p>
+            <div class="card-meta">
+              <time>{{ post.date | date: "%-d %b %Y" }}</time>
+              <span class="card-read">Leer →</span>
+            </div>
+          </div>
+        </a>
+        {% endif %}
+      </div>
+
+      {% if total > 2 %}
+      {% assign sec = "photo-1621761191319-c6fb62004040,photo-1605792657660-596af9009e82,photo-1634704784915-aacf363b021f,photo-1611974789855-9c2a0a7236a3,photo-1516245834210-c4c142787335,photo-1559526324-593bc073d938" | split: "," %}
+      <div class="posts-grid-secondary">
+        {% for post in posts offset:2 limit:6 %}
+          {% assign idx = forloop.index0 | modulo: 6 %}
+          {% assign ph = sec[idx] %}
+          <a href="{{ post.url | relative_url }}" class="post-card-small">
+            <div class="card-image-wrap">
+              <img src="{{ post.image | default: 'https://images.unsplash.com/' | append: ph | append: '?w=500&q=75' }}" alt="{{ post.title }}">
+            </div>
+            <div class="card-body">
+              <span class="card-category">{{ post.category | default: 'Guía' }}</span>
+              <h3 class="card-title-sm">{{ post.title }}</h3>
+              <p class="card-excerpt-dark">{{ post.excerpt | strip_html | truncate: 90 }}</p>
+              <div class="card-meta-dark">
+                <time>{{ post.date | date: "%-d %b %Y" }}</time>
+                <span class="card-read">Leer →</span>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
       {% endif %}
-    </div>
 
+    {% endif %}
   </div>
 </section>
